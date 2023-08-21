@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../ETL PreCheckIn Imagenes .Dataset"
+    },
+    "byConnection": null
+  }
+}

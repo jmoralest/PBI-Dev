@@ -1,0 +1,63 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.46\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"755cf5f08f6ac1a1093a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.666666666666666,\"y\":0,\"z\":0,\"width\":742.6666666666666,\"height\":580,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990.MENSAJE\"},{\"queryRef\":\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990.url_doc\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"MENSAJE\"},\"Name\":\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990.MENSAJE\",\"NativeReferenceName\":\"MENSAJE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"url_doc\"},\"Name\":\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990.url_doc\",\"NativeReferenceName\":\"url_doc\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 580.00,
+          "width": 742.67,
+          "x": 10.67,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection2218716044944c00de19",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"adad9439ce769418bca2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.666666666666666,\"y\":0,\"z\":0,\"width\":1218.6666666666667,\"height\":645.3333333333334,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"getPasajerosMasivoV2.BOOKING_REFERENCE\"},{\"queryRef\":\"getPasajerosMasivoV2.url_passport\"},{\"queryRef\":\"getPasajerosMasivoV2.url_tarjeta_migratoria\"},{\"queryRef\":\"getPasajerosMasivoV2.NOMBRE_COMPLETO\"},{\"queryRef\":\"getPasajerosMasivoV2.PAIS\"},{\"queryRef\":\"getPasajerosMasivoV2.BOOKING_BEGING\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"getPasajerosMasivoV2\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"url_passport\"},\"Name\":\"getPasajerosMasivoV2.url_passport\",\"NativeReferenceName\":\"url_passport\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"url_tarjeta_migratoria\"},\"Name\":\"getPasajerosMasivoV2.url_tarjeta_migratoria\",\"NativeReferenceName\":\"url_tarjeta_migratoria\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"BOOKING_REFERENCE\"},\"Name\":\"getPasajerosMasivoV2.BOOKING_REFERENCE\",\"NativeReferenceName\":\"BOOKING_REFERENCE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"PAIS\"},\"Name\":\"getPasajerosMasivoV2.PAIS\",\"NativeReferenceName\":\"PAIS\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"NOMBRE_COMPLETO\"},\"Name\":\"getPasajerosMasivoV2.NOMBRE_COMPLETO\",\"NativeReferenceName\":\"NOMBRE_COMPLETO\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"BOOKING_BEGING\"},\"Name\":\"getPasajerosMasivoV2.BOOKING_BEGING\",\"NativeReferenceName\":\"BOOKING_BEGING\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"177.33333333333334D\"}}}},\"selector\":{\"metadata\":\"getPasajerosMasivoV2.NOMBRE_COMPLETO\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"160D\"}}}},\"selector\":{\"metadata\":\"getPasajerosMasivoV2.url_passport\"}}]}}}",
+          "filters": "[]",
+          "height": 645.33,
+          "width": 1218.67,
+          "x": 10.67,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

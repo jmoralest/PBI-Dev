@@ -1,0 +1,628 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.119.986.0 (23.07)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990\",\"getPasajerosMasivoV2\",\"anexo documento pax\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "anexo documento pax",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Binary"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Web.Contents(\"https://rcpcicoapi.indeone.app/UPLOAD/62ccaf53-d191-40ff-a39c-7c633e292877.jpg\", [Headers=[token=\"47c9ea9d93e42935315b35b2b9565faa\"]])",
+          "in",
+          "    Source"
+        ],
+        "kind": "m",
+        "lineageTag": "6fae3a0e-f78a-4a66-9bcc-bf9e0fe14390"
+      }
+    ],
+    "sourceQueryCulture": "es-CL",
+    "tables": [
+      {
+        "name": "getPasajerosMasivoV2",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "BOOKING_BEGING",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "5c081130-1f76-4bd9-bad7-3cc512efa22f",
+            "sourceColumn": "BOOKING_BEGING",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BOOKING_END",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "d7b465b4-40e6-41ff-9184-1602c85b902f",
+            "sourceColumn": "BOOKING_END",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BOOKING_ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d61d6b95-1629-494c-a79a-8c4ccacaf719",
+            "sourceColumn": "BOOKING_ID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "BOOKING_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7b1d721c-5ee5-4798-91aa-cc7c144f4fce",
+            "sourceColumn": "BOOKING_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BOOKING_REFERENCE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8fc1fab1-edde-4224-b13b-10e7b87eaa76",
+            "sourceColumn": "BOOKING_REFERENCE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CIUDAD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "03b62a31-15bc-444a-959b-8728d0ac500a",
+            "sourceColumn": "CIUDAD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "COMENTARIO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ccdb931c-e689-44f4-bd50-634592d4c793",
+            "sourceColumn": "COMENTARIO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CORREO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d422d487-7ac9-4cf9-80a1-991e910938ed",
+            "sourceColumn": "CORREO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DIRECCION",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4b10da53-0727-412b-b1d8-e58e03199ec4",
+            "sourceColumn": "DIRECCION",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ESTADO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "89a2f15e-7dc5-4afa-8b26-4366ec904586",
+            "sourceColumn": "ESTADO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FECHA_NACIMIENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "80837bb0-d072-417c-8fd8-29331dd2db02",
+            "sourceColumn": "FECHA_NACIMIENTO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MENSAJE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6c451460-ad37-4b9d-b31b-711ca91713af",
+            "sourceColumn": "MENSAJE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOMBRE_COMPLETO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3be22e1-f9bc-4bee-9e23-dbf80164e47f",
+            "sourceColumn": "NOMBRE_COMPLETO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PAIS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "22d3d0fa-c3e6-4817-b4d3-016873f2b246",
+            "sourceColumn": "PAIS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAPORTE_N",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "729826e9-e16d-4ea7-95c6-14145d773299",
+            "sourceColumn": "PASAPORTE_N",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAPORTE_TIPO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "11cfb86f-db1f-4f1b-8217-d26943d2b699",
+            "sourceColumn": "PASAPORTE_TIPO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "url_passport",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "6d6979a7-b747-4948-b835-0044b1a9c920",
+            "sourceColumn": "url_passport",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "url_tarjeta_migratoria",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "b2ca922a-1742-4ebc-a0d3-13e0705a706b",
+            "sourceColumn": "url_tarjeta_migratoria",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "Base datos de pre check in se migro de sql a mongodb. ETL con PowerQuery, imagenes de documentos en Base64 se bajan desde url, utilziando la misma llamada mas la ruta: https://rcpcicoapi.indeone.app/UPLOAD/32c61d9d-89f8-4de8-9afd-5093d12d06c0.jpeg.- Los ejemplos estan filtrados para optimizar pruebas y poc/mvp",
+        "lineageTag": "a640747c-4bcc-4e9a-b7f2-9401e665fd77",
+        "partitions": [
+          {
+            "name": "getPasajerosMasivoV2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    // Request o call GET  a servidor indesad donde esta disponible bd mongodb",
+                "    Source = Json.Document(Web.Contents(\"https://rcpcicoapi.indeone.app/api/INDESAD/getPasajerosMasivoV2?BookingRef=\", [Headers=[token=\"47c9ea9d93e42935315b35b2b9565faa\"]])),",
+                "    #\"Converted to Table\" = Table.FromRecords({Source}),",
+                "    #\"Expanded OBJETO\" = Table.ExpandListColumn(#\"Converted to Table\", \"OBJETO\"),",
+                "    #\"Expanded OBJETO1\" = Table.ExpandRecordColumn(#\"Expanded OBJETO\", \"OBJETO\", {\"_Id\", \"BOOKING_ID\", \"BOOKING_REFERENCE\", \"BOOKING_BEGING\", \"BOOKING_END\", \"BOOKING_NAME\", \"BOOKING_EMAIL\", \"FECHA_SISTEMA\", \"FECHA_ACTUALIZACION\", \"ESTADO\", \"PASAJEROS\"}, {\"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.BOOKING_EMAIL\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS\"}),",
+                "    #\"Expanded OBJETO.PASAJEROS\" = Table.ExpandListColumn(#\"Expanded OBJETO1\", \"OBJETO.PASAJEROS\"),",
+                "    #\"Expanded OBJETO.PASAJEROS1\" = Table.ExpandRecordColumn(#\"Expanded OBJETO.PASAJEROS\", \"OBJETO.PASAJEROS\", {\"NOMBRE_COMPLETO\", \"CORREO\", \"FECHA_NACIMIENTO\", \"PASAPORTE_TIPO\", \"PASAPORTE_N\", \"TELEFONO_PREFIJO\", \"TELEFONO\", \"PAIS\", \"CIUDAD\", \"DIRECCION\", \"COMENTARIO\", \"PASAPORTE\", \"TARJETA_MIGRATORIA\"}, {\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Expanded OBJETO.PASAJEROS1\",{{\"ESTADO\", type logical}, {\"MENSAJE\", type text}, {\"TOKEN\", type any}, {\"OBJETO._Id\", type text}, {\"OBJETO.BOOKING_ID\", Int64.Type}, {\"OBJETO.BOOKING_REFERENCE\", type text}, {\"OBJETO.BOOKING_BEGING\", type datetime}, {\"OBJETO.BOOKING_END\", type datetime}, {\"OBJETO.BOOKING_NAME\", type text}, {\"OBJETO.BOOKING_EMAIL\", type any}, {\"OBJETO.FECHA_SISTEMA\", type datetime}, {\"OBJETO.FECHA_ACTUALIZACION\", type datetime}, {\"OBJETO.ESTADO\", type any}, {\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", type text}, {\"OBJETO.PASAJEROS.CORREO\", type text}, {\"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", type datetime}, {\"OBJETO.PASAJEROS.PASAPORTE_TIPO\", type text}, {\"OBJETO.PASAJEROS.PASAPORTE_N\", type text}, {\"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", Int64.Type}, {\"OBJETO.PASAJEROS.TELEFONO\", Int64.Type}, {\"OBJETO.PASAJEROS.PAIS\", type text}, {\"OBJETO.PASAJEROS.CIUDAD\", type text}, {\"OBJETO.PASAJEROS.DIRECCION\", type text}, {\"OBJETO.PASAJEROS.COMENTARIO\", type text}, {\"OBJETO.PASAJEROS.PASAPORTE\", type any}, {\"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\", type any}}),",
+                "    #\"Expanded OBJETO.PASAJEROS.PASAPORTE\" = Table.ExpandRecordColumn(#\"Changed Type\", \"OBJETO.PASAJEROS.PASAPORTE\", {\"_Id\", \"RUTA\", \"NOMBRE\", \"FORMATO\", \"TIPO\"}, {\"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\"}),",
+                "    #\"Expanded OBJETO.PASAJEROS.TARJETA_MIGRATORIA\" = Table.ExpandRecordColumn(#\"Expanded OBJETO.PASAJEROS.PASAPORTE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\", {\"_Id\", \"RUTA\", \"NOMBRE\", \"FORMATO\", \"TIPO\"}, {\"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Expanded OBJETO.PASAJEROS.TARJETA_MIGRATORIA\",{\"ESTADO\"}),",
+                "    columna_url_raiz = Table.AddColumn(#\"Removed Columns\", \"url0\", each \"https://rcpcicoapi.indeone.app/\"),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(columna_url_raiz,{{\"url0\", type text}}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Changed Type1\",{\"MENSAJE\", \"url0\", \"TOKEN\", \"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.BOOKING_EMAIL\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Reordered Columns\",{\"TOKEN\", \"OBJETO.BOOKING_EMAIL\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Removed Columns1\",{{\"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", type text}, {\"OBJETO.PASAJEROS.TELEFONO\", type text}}),",
+                "    #\"Reordered Columns1\" = Table.ReorderColumns(#\"Changed Type2\",{\"MENSAJE\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"url0\", \"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Reordered Columns1\",{\"OBJETO._Id\"}),",
+                "    #\"Duplicated Column\" = Table.DuplicateColumn(#\"Removed Columns2\", \"url0\", \"url0 - Copy\"),",
+                "    #\"Reordered Columns2\" = Table.ReorderColumns(#\"Duplicated Column\",{\"MENSAJE\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"url0\", \"url0 - Copy\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Reordered Columns2\",{{\"url0 - Copy\", \"url1\"}}),",
+                "    #\"Reordered Columns3\" = Table.ReorderColumns(#\"Renamed Columns\",{\"MENSAJE\", \"url0\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"url1\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Reordered Columns3\",{{\"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", type text}, {\"OBJETO.PASAJEROS.PASAPORTE.RUTA\", type text}}),",
+                "    #\"columna_merge_para:url_doc\" = Table.CombineColumns(#\"Changed Type3\",{\"url0\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\"},Combiner.CombineTextByDelimiter(\"\", QuoteStyle.None),\"Merged\"),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"columna_merge_para:url_doc\",{{\"Merged\", \"url_passport\"}}),",
+                "    #\"Merged Columns1\" = Table.CombineColumns(#\"Renamed Columns1\",{\"url1\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\"},Combiner.CombineTextByDelimiter(\"\", QuoteStyle.None),\"Merged\"),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Merged Columns1\",{{\"Merged\", \"url_tarjeta_migratoria\"}}),",
+                "    filtro_para_dejar_valores_no_null = Table.SelectRows(#\"Renamed Columns2\", each ([url_passport] <> \"https://rcpcicoapi.indeone.app/\") and ([url_tarjeta_migratoria] <> \"https://rcpcicoapi.indeone.app/\")),",
+                "    #\"Removed Columns3\" = Table.RemoveColumns(filtro_para_dejar_valores_no_null,{\"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\"}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Removed Columns3\",{{\"OBJETO.BOOKING_ID\", \"BOOKING_ID\"}, {\"OBJETO.BOOKING_REFERENCE\", \"BOOKING_REFERENCE\"}, {\"OBJETO.BOOKING_BEGING\", \"BOOKING_BEGING\"}, {\"OBJETO.BOOKING_END\", \"BOOKING_END\"}, {\"OBJETO.BOOKING_NAME\", \"BOOKING_NAME\"}, {\"OBJETO.ESTADO\", \"ESTADO\"}, {\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"NOMBRE_COMPLETO\"}, {\"OBJETO.PASAJEROS.CORREO\", \"CORREO\"}, {\"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"FECHA_NACIMIENTO\"}, {\"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"PASAPORTE_TIPO\"}, {\"OBJETO.PASAJEROS.PASAPORTE_N\", \"PASAPORTE_N\"}, {\"OBJETO.PASAJEROS.PAIS\", \"PAIS\"}, {\"OBJETO.PASAJEROS.CIUDAD\", \"CIUDAD\"}, {\"OBJETO.PASAJEROS.DIRECCION\", \"DIRECCION\"}, {\"OBJETO.PASAJEROS.COMENTARIO\", \"COMENTARIO\"}}),",
+                "    #\"Removed Columns4\" = Table.RemoveColumns(#\"Renamed Columns3\",{\"OBJETO.PASAJEROS.PASAPORTE._Id\"}),",
+                "    #\"Renamed Columns4\" = Table.RenameColumns(#\"Removed Columns4\",{{\"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"NOMBRE\"}}),",
+                "    #\"Removed Columns5\" = Table.RemoveColumns(#\"Renamed Columns4\",{\"NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"})",
+                "in",
+                "    #\"Removed Columns5\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "BOOKING_REFERENCE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a04d3c0-f80b-4d90-90c2-3de414a1de0a",
+            "sourceColumn": "BOOKING_REFERENCE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CORREO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "83c42d5a-6b10-4c61-a31d-e0520bd498e3",
+            "sourceColumn": "CORREO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ECHA_NACIMIENTO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "549adc76-2543-4d3d-b7bc-722248bfb834",
+            "sourceColumn": "ECHA_NACIMIENTO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MENSAJE",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5092c5a3-ae85-4ded-b7fb-4f875520b7d8",
+            "sourceColumn": "MENSAJE",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOMBRE_COMPLETO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e0680af8-f66f-4055-913d-b2f63ba483bc",
+            "sourceColumn": "NOMBRE_COMPLETO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBJETO.BOOKING_BEGING",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "c2f5e31f-a39f-4a60-9822-97044f4e3e8e",
+            "sourceColumn": "OBJETO.BOOKING_BEGING",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBJETO.BOOKING_END",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "e233b602-8f55-4508-ab4f-49236bd8cd1c",
+            "sourceColumn": "OBJETO.BOOKING_END",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBJETO.BOOKING_NAME",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8cda0fbf-2ede-4fc9-9a16-74c7bc809730",
+            "sourceColumn": "OBJETO.BOOKING_NAME",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBJETO.FECHA_ACTUALIZACION",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "639f5cc2-a2e7-4fa4-b423-80e50f8fb696",
+            "sourceColumn": "OBJETO.FECHA_ACTUALIZACION",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OBJETO.FECHA_SISTEMA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "7b7a040a-2a46-470f-aaa3-8a71f2470009",
+            "sourceColumn": "OBJETO.FECHA_SISTEMA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAJEROS.CIUDAD",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "788c1633-c479-4409-bf2d-a276e69373e3",
+            "sourceColumn": "PASAJEROS.CIUDAD",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAJEROS.PAIS",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "adbc42f0-54b6-475a-a17b-cbcdff01729a",
+            "sourceColumn": "PASAJEROS.PAIS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAPORTE_N",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "622c9296-5c13-4e94-bfe9-9c6edbef5696",
+            "sourceColumn": "PASAPORTE_N",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PASAPORTE_TIPO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4a7b12b3-4231-41a6-bd5a-b899ee09c438",
+            "sourceColumn": "PASAPORTE_TIPO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "url_doc",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "e77c761a-c4c5-4ffe-91d0-2f8879c2cb38",
+            "sourceColumn": "url_doc",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "Base datos de pre check in se migro de sql a mongodb. ETL con PowerQuery, imagenes de documentos en Base64 se bajan desde url, utilziando la misma llamada mas la ruta: https://rcpcicoapi.indeone.app/UPLOAD/32c61d9d-89f8-4de8-9afd-5093d12d06c0.jpeg",
+        "lineageTag": "3be3379b-0130-4e3e-8a25-f999d655ba96",
+        "partitions": [
+          {
+            "name": "getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Json.Document(Web.Contents(\"https://rcpcicoapi.indeone.app/api/INDESAD/getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990\", [Headers=[token=\"47c9ea9d93e42935315b35b2b9565faa\"]])),",
+                "    #\"Converted to Table\" = Table.FromRecords({Source}),",
+                "    #\"Expanded OBJETO\" = Table.ExpandListColumn(#\"Converted to Table\", \"OBJETO\"),",
+                "    #\"Expanded OBJETO1\" = Table.ExpandRecordColumn(#\"Expanded OBJETO\", \"OBJETO\", {\"_Id\", \"BOOKING_ID\", \"BOOKING_REFERENCE\", \"BOOKING_BEGING\", \"BOOKING_END\", \"BOOKING_NAME\", \"BOOKING_EMAIL\", \"FECHA_SISTEMA\", \"FECHA_ACTUALIZACION\", \"ESTADO\", \"PASAJEROS\"}, {\"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.BOOKING_EMAIL\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS\"}),",
+                "    #\"Expanded OBJETO.PASAJEROS\" = Table.ExpandListColumn(#\"Expanded OBJETO1\", \"OBJETO.PASAJEROS\"),",
+                "    #\"Expanded OBJETO.PASAJEROS1\" = Table.ExpandRecordColumn(#\"Expanded OBJETO.PASAJEROS\", \"OBJETO.PASAJEROS\", {\"NOMBRE_COMPLETO\", \"CORREO\", \"FECHA_NACIMIENTO\", \"PASAPORTE_TIPO\", \"PASAPORTE_N\", \"TELEFONO_PREFIJO\", \"TELEFONO\", \"PAIS\", \"CIUDAD\", \"DIRECCION\", \"COMENTARIO\", \"PASAPORTE\", \"TARJETA_MIGRATORIA\"}, {\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\"}),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Expanded OBJETO.PASAJEROS1\",{{\"ESTADO\", type logical}, {\"MENSAJE\", type text}, {\"TOKEN\", type any}, {\"OBJETO._Id\", type text}, {\"OBJETO.BOOKING_ID\", Int64.Type}, {\"OBJETO.BOOKING_REFERENCE\", type text}, {\"OBJETO.BOOKING_BEGING\", type datetime}, {\"OBJETO.BOOKING_END\", type datetime}, {\"OBJETO.BOOKING_NAME\", type text}, {\"OBJETO.BOOKING_EMAIL\", type any}, {\"OBJETO.FECHA_SISTEMA\", type datetime}, {\"OBJETO.FECHA_ACTUALIZACION\", type datetime}, {\"OBJETO.ESTADO\", type any}, {\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", type text}, {\"OBJETO.PASAJEROS.CORREO\", type text}, {\"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", type datetime}, {\"OBJETO.PASAJEROS.PASAPORTE_TIPO\", type text}, {\"OBJETO.PASAJEROS.PASAPORTE_N\", type text}, {\"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", Int64.Type}, {\"OBJETO.PASAJEROS.TELEFONO\", Int64.Type}, {\"OBJETO.PASAJEROS.PAIS\", type text}, {\"OBJETO.PASAJEROS.CIUDAD\", type text}, {\"OBJETO.PASAJEROS.DIRECCION\", type text}, {\"OBJETO.PASAJEROS.COMENTARIO\", type text}, {\"OBJETO.PASAJEROS.PASAPORTE\", type any}, {\"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\", type any}}),",
+                "    #\"Expanded OBJETO.PASAJEROS.PASAPORTE\" = Table.ExpandRecordColumn(#\"Changed Type\", \"OBJETO.PASAJEROS.PASAPORTE\", {\"_Id\", \"RUTA\", \"NOMBRE\", \"FORMATO\", \"TIPO\"}, {\"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\"}),",
+                "    #\"Expanded OBJETO.PASAJEROS.TARJETA_MIGRATORIA\" = Table.ExpandRecordColumn(#\"Expanded OBJETO.PASAJEROS.PASAPORTE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA\", {\"_Id\", \"RUTA\", \"NOMBRE\", \"FORMATO\", \"TIPO\"}, {\"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Reordered Columns\" = Table.ReorderColumns(#\"Expanded OBJETO.PASAJEROS.TARJETA_MIGRATORIA\",{\"ESTADO\", \"MENSAJE\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"TOKEN\", \"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.BOOKING_EMAIL\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Reordered Columns\",{\"ESTADO\", \"TOKEN\", \"OBJETO._Id\", \"OBJETO.BOOKING_ID\", \"OBJETO.PASAJEROS.DIRECCION\", \"OBJETO.PASAJEROS.COMENTARIO\", \"OBJETO.PASAJEROS.PASAPORTE._Id\", \"OBJETO.PASAJEROS.PASAPORTE.NOMBRE\", \"OBJETO.PASAJEROS.PASAPORTE.FORMATO\", \"OBJETO.PASAJEROS.PASAPORTE.TIPO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA._Id\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.RUTA\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.NOMBRE\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.FORMATO\", \"OBJETO.PASAJEROS.TARJETA_MIGRATORIA.TIPO\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([OBJETO.PASAJEROS.PASAPORTE.RUTA] <> null)),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Filtered Rows\",{\"OBJETO.BOOKING_EMAIL\"}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns1\", \"url\", each \"https://rcpcicoapi.indeone.app/\"),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"url\", type text}}),",
+                "    #\"Reordered Columns1\" = Table.ReorderColumns(#\"Changed Type1\",{\"MENSAJE\", \"url\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\", \"OBJETO.BOOKING_REFERENCE\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Reordered Columns1\",{{\"OBJETO.PASAJEROS.PASAPORTE.RUTA\", type text}}),",
+                "    #\"Merged Columns\" = Table.CombineColumns(#\"Changed Type2\",{\"url\", \"OBJETO.PASAJEROS.PASAPORTE.RUTA\"},Combiner.CombineTextByDelimiter(\"\", QuoteStyle.None),\"Merged\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Merged Columns\",{{\"Merged\", \"url_doc\"}}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Renamed Columns\",{\"OBJETO.PASAJEROS.TELEFONO_PREFIJO\", \"OBJETO.PASAJEROS.TELEFONO\"}),",
+                "    #\"Reordered Columns2\" = Table.ReorderColumns(#\"Removed Columns2\",{\"OBJETO.BOOKING_REFERENCE\", \"MENSAJE\", \"url_doc\", \"OBJETO.BOOKING_BEGING\", \"OBJETO.BOOKING_END\", \"OBJETO.BOOKING_NAME\", \"OBJETO.FECHA_SISTEMA\", \"OBJETO.FECHA_ACTUALIZACION\", \"OBJETO.ESTADO\", \"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"OBJETO.PASAJEROS.CORREO\", \"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"OBJETO.PASAJEROS.PASAPORTE_N\", \"OBJETO.PASAJEROS.PAIS\", \"OBJETO.PASAJEROS.CIUDAD\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Reordered Columns2\",{{\"OBJETO.BOOKING_REFERENCE\", \"BOOKING_REFERENCE\"}}),",
+                "    #\"Removed Columns3\" = Table.RemoveColumns(#\"Renamed Columns1\",{\"OBJETO.ESTADO\"}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Removed Columns3\",{{\"OBJETO.PASAJEROS.NOMBRE_COMPLETO\", \"NOMBRE_COMPLETO\"}, {\"OBJETO.PASAJEROS.CORREO\", \"CORREO\"}, {\"OBJETO.PASAJEROS.FECHA_NACIMIENTO\", \"ECHA_NACIMIENTO\"}, {\"OBJETO.PASAJEROS.PASAPORTE_TIPO\", \"PASAPORTE_TIPO\"}, {\"OBJETO.PASAJEROS.PASAPORTE_N\", \"PASAPORTE_N\"}, {\"OBJETO.PASAJEROS.PAIS\", \"PASAJEROS.PAIS\"}, {\"OBJETO.PASAJEROS.CIUDAD\", \"PASAJEROS.CIUDAD\"}})",
+                "in",
+                "    #\"Renamed Columns2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
