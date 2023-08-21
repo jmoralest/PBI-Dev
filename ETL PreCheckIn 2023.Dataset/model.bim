@@ -751,7 +751,7 @@
         "lineageTag": "a640747c-4bcc-4e9a-b7f2-9401e665fd77",
         "measures": [
           {
-            "name": "#Recuento Reservas",
+            "name": "#Recuento Reference",
             "expression": "DISTINCTCOUNT(getPasajerosMasivoV2[BOOKING_REFERENCE])",
             "formatString": "#,0",
             "lineageTag": "f44532f4-9a05-44a7-b1f4-d09f1a6a2e78"
