@@ -2,7 +2,7 @@
   "version": "1.0",
   "datasetReference": {
     "byPath": {
-      "path": "../ETL PreCheckIn Imagenes .Dataset"
+      "path": "../ETL PreCheckIn 2023.Dataset"
     },
     "byConnection": null
   }
