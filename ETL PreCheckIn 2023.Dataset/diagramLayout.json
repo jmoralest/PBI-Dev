@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 19,
+            "y": 383
           },
           "nodeIndex": "getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990",
           "nodeLineageTag": "3be3379b-0130-4e3e-8a25-f999d655ba96",
@@ -19,12 +19,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 284,
-            "y": 0
+            "x": 369,
+            "y": 353
           },
           "nodeIndex": "getPasajerosMasivoV2",
           "nodeLineageTag": "a640747c-4bcc-4e9a-b7f2-9401e665fd77",
@@ -32,7 +32,20 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 11,
+            "y": 0
+          },
+          "nodeIndex": "Dates",
+          "nodeLineageTag": "ce927b4d-f0bf-45c5-bc24-93efcdd379ef",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
         }
       ],
       "name": "All tables",

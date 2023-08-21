@@ -1,5 +1,5 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990\",\"getPasajerosMasivoV2\",\"anexo documento pax\"]"
+        "value": "[\"getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990\",\"getPasajerosMasivoV2\",\"anexo documento pax\",\"Dates\"]"
       },
       {
         "name": "PBI_ProTooling",
@@ -61,8 +61,438 @@
         "lineageTag": "6fae3a0e-f78a-4a66-9bcc-bf9e0fe14390"
       }
     ],
+    "relationships": [
+      {
+        "name": "1f37101c-ac31-4e94-8224-3ac37a85d238",
+        "fromColumn": "OBJETO.BOOKING_BEGING",
+        "fromTable": "getPasajerosMasivoV2?BookingRef=FSAL102515%7CFSAL107990",
+        "toColumn": "Date",
+        "toTable": "Dates"
+      },
+      {
+        "name": "8e495b36-71ad-4f2f-a876-fc70bd101117",
+        "fromColumn": "BOOKING_BEGING",
+        "fromTable": "getPasajerosMasivoV2",
+        "toColumn": "Date",
+        "toTable": "Dates"
+      }
+    ],
     "sourceQueryCulture": "es-CL",
     "tables": [
+      {
+        "name": "Dates",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Año",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fab525b1-ed97-40fa-bcbf-0a9ca67a5d56",
+            "sourceColumn": "Año",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "isKey": true,
+            "lineageTag": "bfe83cbd-8add-4a01-aeb3-ab8d8a9653da",
+            "sourceColumn": "Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Día",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "428590eb-0c18-4127-b4d9-9407cd288380",
+            "sourceColumn": "Día",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FinDeMes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Short Date",
+            "lineageTag": "754b7b76-898c-4f08-b421-c72c4d94686c",
+            "sourceColumn": "FinDeMes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f541eccb-4775-4052-a546-58c2bfa39eda",
+            "sourceColumn": "Mes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Mes CL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b497eb70-1636-4cd4-ac8d-77b1f234a628",
+            "sourceColumn": "Mes CL",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nombre del mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de45fdb9-7a1a-4907-b5d8-01b917fdfeca",
+            "sortByColumn": "Mes",
+            "sourceColumn": "Nombre del mes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Semana Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7a93cc20-ba6e-4f19-b784-605f96de040e",
+            "sourceColumn": "Semana Mes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Semana del año",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "bf1af011-06f4-4955-9b3a-bb88d4bbde39",
+            "sourceColumn": "Semana del año",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Temporada",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d6ff8b1b-7a93-4d06-908e-24bd8b787093",
+            "sourceColumn": "Temporada",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "ce927b4d-f0bf-45c5-bc24-93efcdd379ef",
+        "partitions": [
+          {
+            "name": "Dates",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "  StartDate= #date(2017,01,01),     // Change start date  #date(yyyy,m,d)   ",
+                "  EndDate=#date(2025,08,31),  // Could change to #date(yyyy,m,d) if you need to specify future date",
+                "//Temporada",
+                "   ",
+                "    Personalizado1 = List.Dates(StartDate, Number.From(EndDate)- Number.From(StartDate)+1 ,#duration(1,0,0,0)),",
+                "    #\"Convertida en tabla\" = Table.FromList(Personalizado1, Splitter.SplitByNothing(), null, null, ExtraValues.Error),",
+                "    #\"Año insertado\" = Table.AddColumn(#\"Convertida en tabla\", \"Año\", each Date.Year([Column1]), type number),",
+                "    #\"Columnas con nombre cambiado\" = Table.RenameColumns(#\"Año insertado\",{{\"Column1\", \"Date\"}}),",
+                "    #\"Mes insertado\" = Table.AddColumn(#\"Columnas con nombre cambiado\", \"Mes\", each Date.Month([Date]), type number),",
+                "    #\"Nombre del mes insertado\" = Table.AddColumn(#\"Mes insertado\", \"Nombre del mes\", each Date.MonthName([Date]), type text),",
+                "    #\"Semana del año insertada\" = Table.AddColumn(#\"Nombre del mes insertado\", \"Semana del año\", each Date.WeekOfYear([Date]), type number),",
+                "    #\"Personalizada agregada\" = Table.AddColumn(#\"Semana del año insertada\", \"Mes CL\", each Date.MonthName(([Date]),\"es-CL\")),",
+                "    #\"Capitalized Each Word1\" = Table.TransformColumns(#\"Personalizada agregada\",{{\"Mes CL\", Text.Proper, type text}}),",
+                "    #\"Filas filtradas\" = Table.SelectRows(#\"Capitalized Each Word1\", each true),",
+                "    #\"Tipo cambiado\" = Table.TransformColumnTypes(#\"Filas filtradas\",{{\"Date\", type date}}),",
+                "    #\"Personalizada agregada1\" = Table.AddColumn(#\"Tipo cambiado\", \"Personalizado\", each Date.EndOfMonth([Date])),",
+                "    #\"Columnas con nombre cambiado1\" = Table.RenameColumns(#\"Personalizada agregada1\",{{\"Personalizado\", \"FinDeMes\"}}),",
+                "    #\"Tipo cambiado con configuración regional\" = Table.TransformColumnTypes(#\"Columnas con nombre cambiado1\", {{\"FinDeMes\", type date}}, \"es-CL\"),",
+                "    #\"Tipo cambiado1\" = Table.TransformColumnTypes(#\"Tipo cambiado con configuración regional\",{{\"Date\", type datetime}}),",
+                "    #\"Poner En Mayúsculas Cada Palabra\" = Table.TransformColumns(#\"Tipo cambiado1\",{{\"Nombre del mes\", Text.Proper, type text}}),",
+                "    #\"Tipo cambiado2\" = Table.TransformColumnTypes(#\"Poner En Mayúsculas Cada Palabra\",{{\"Date\", type date}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Tipo cambiado2\", \"Día\", each Date.DayOfWeekName(([Date]),\"es-CL\")),",
+                "    #\"Capitalized Each Word\" = Table.TransformColumns(#\"Added Custom\",{{\"Día\", Text.Proper, type text}}),",
+                "    #\"Added Custom1\" = Table.AddColumn(#\"Capitalized Each Word\", \"Semana Mes\", each Date.WeekOfMonth(([Date]))),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Custom1\",{{\"Semana Mes\", Int64.Type}}),",
+                "    #\"Added Custom2\" = Table.AddColumn(#\"Changed Type\", \"Temporada\", each ",
+                "    ",
+                "if [Mes]=9 and [Año] = 2017 then \"2017-2018\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2017 then \"2017-2018\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2017 then \"2017-2018\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2017 then \"2017-2018\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2018 then \"2017-2018\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2018 then \"2018-2019\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2018 then \"2018-2019\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2018 then \"2018-2019\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2018 then \"2018-2019\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2019 then \"2018-2019\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2019 then \"2019-2020\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2019 then \"2019-2020\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2019 then \"2019-2020\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2019 then \"2019-2020\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2020 then \"2019-2020\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2020 then \"2020-2021\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2020 then \"2020-2021\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2020 then \"2020-2021\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2020 then \"2020-2021\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2021 then \"2020-2021\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2021 then \"2021-2022\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2021 then \"2021-2022\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2021 then \"2021-2022\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2021 then \"2021-2022\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2022 then \"2021-2022\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2022 then \"2022-2023\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2022 then \"2022-2023\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2022 then \"2022-2023\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2022 then \"2022-2023\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2023 then \"2022-2023\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2023 then \"2023-2024\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2023 then \"2023-2024\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2023 then \"2023-2024\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2023 then \"2023-2024\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2024 then \"2023-2024\"",
+                "else",
+                "if [Mes]=9 and [Año] = 2024 then \"2024-2025\"",
+                "else",
+                "if [Mes]=10 and [Año] = 2024 then \"2024-2025\"",
+                "else",
+                "if [Mes]=11 and [Año] = 2024 then \"2024-2025\"",
+                "else",
+                "if [Mes]=12 and [Año] = 2024 then \"2024-2025\"",
+                "else",
+                "if [Mes]=1 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=2 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=3 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=4 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=5 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=6 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=7 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "if [Mes]=8 and [Año] = 2025 then \"2024-2025\"",
+                "else",
+                "\"--\"),",
+                "",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom2\",{{\"Temporada\", type text}}),",
+                "    #\"Filas filtradas1\" = Table.SelectRows(#\"Changed Type1\", each true),",
+                "    #\"Tipo cambiado3\" = Table.TransformColumnTypes(#\"Filas filtradas1\",{{\"Año\", Int64.Type}}),",
+                "    #\"Columnas reordenadas\" = Table.ReorderColumns(#\"Tipo cambiado3\",{\"Date\", \"Año\", \"Mes\", \"Nombre del mes\", \"Temporada\", \"Semana del año\", \"Mes CL\", \"FinDeMes\", \"Día\", \"Semana Mes\"}),",
+                "    #\"Columnas reordenadas1\" = Table.ReorderColumns(#\"Columnas reordenadas\",{\"Date\", \"Año\", \"Mes\", \"Temporada\", \"Nombre del mes\", \"Semana del año\", \"Mes CL\", \"FinDeMes\", \"Día\", \"Semana Mes\"})",
+                "in",
+                "    #\"Columnas reordenadas1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
       {
         "name": "getPasajerosMasivoV2",
         "annotations": [
@@ -109,14 +539,14 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "d61d6b95-1629-494c-a79a-8c4ccacaf719",
             "sourceColumn": "BOOKING_ID",
-            "summarizeBy": "count"
+            "summarizeBy": "none"
           },
           {
             "name": "BOOKING_NAME",
@@ -319,6 +749,14 @@
         ],
         "description": "Base datos de pre check in se migro de sql a mongodb. ETL con PowerQuery, imagenes de documentos en Base64 se bajan desde url, utilziando la misma llamada mas la ruta: https://rcpcicoapi.indeone.app/UPLOAD/32c61d9d-89f8-4de8-9afd-5093d12d06c0.jpeg.- Los ejemplos estan filtrados para optimizar pruebas y poc/mvp",
         "lineageTag": "a640747c-4bcc-4e9a-b7f2-9401e665fd77",
+        "measures": [
+          {
+            "name": "#Recuento Reservas",
+            "expression": "DISTINCTCOUNT(getPasajerosMasivoV2[BOOKING_REFERENCE])",
+            "formatString": "#,0",
+            "lineageTag": "f44532f4-9a05-44a7-b1f4-d09f1a6a2e78"
+          }
+        ],
         "partitions": [
           {
             "name": "getPasajerosMasivoV2",
