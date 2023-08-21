@@ -1,0 +1,230 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1107.8301503202556,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 5251.96163941536,
+            "y": 96
+          },
+          "nodeIndex": "Time Intelligence",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1749.7754479197768,
+            "y": 5
+          },
+          "nodeIndex": "dates",
+          "nodeLineageTag": "e55948f5-eb9d-4fe3-8675-957fd48c8844",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 2084.275957083486,
+            "y": 418.34677762292114
+          },
+          "nodeIndex": "pbi request jira ltp",
+          "nodeLineageTag": "d2af7a4d-e60e-4e0e-bfda-8bdb87f0018d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 2322.9720206265019,
+            "y": 38.410281879824879
+          },
+          "nodeIndex": "pbi story points",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 294.1847511806298,
+            "y": 201.67338881146054
+          },
+          "nodeIndex": "pbi request jira ltp II",
+          "nodeLineageTag": "ff227ebb-999b-48c6-afb5-30a05ae9d09e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 578.36163941535983,
+            "y": 300.99838144389525
+          },
+          "nodeIndex": "pbi dim epic",
+          "nodeLineageTag": "4076e6a3-d9c5-4bb0-b0b6-6c83282ec103",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 35.497569132136931
+          },
+          "nodeIndex": "pbi dim issues",
+          "nodeLineageTag": "1fd3cae7-2023-4056-a7d5-261024bad912",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1420.3616394153598,
+            "y": 237.67338881146054
+          },
+          "nodeIndex": "Equipo",
+          "nodeLineageTag": "258f09e7-d0ad-4d9e-aa5e-9054aaa8dab0",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1146.3616394153598,
+            "y": 287.67338881146054
+          },
+          "nodeIndex": "ZZembImagenes",
+          "nodeLineageTag": "eb093c79-f0e7-4625-8bc9-dbd2b3f2ae16",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1108.5461172643054,
+            "y": 635.83216196084413
+          },
+          "nodeIndex": "pq imgs",
+          "nodeLineageTag": "71675943-f400-4a83-8f7f-de858f50f21e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 10
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 65.804311228509,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 719,
+        "y": 359
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "dates",
+          "nodeLineageTag": "e55948f5-eb9d-4fe3-8675-957fd48c8844",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 273,
+            "y": 235
+          },
+          "nodeIndex": "pbi request jira ltp",
+          "nodeLineageTag": "d2af7a4d-e60e-4e0e-bfda-8bdb87f0018d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 517,
+            "y": 16
+          },
+          "nodeIndex": "pbi story points",
+          "nodeLineageTag": "d623589f-1ef7-4daf-92f7-3f9fc845d3ee",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 810,
+            "y": 17
+          },
+          "nodeIndex": "pbi dim epic",
+          "nodeLineageTag": "4076e6a3-d9c5-4bb0-b0b6-6c83282ec103",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1116,
+            "y": 17
+          },
+          "nodeIndex": "pbi dim issues",
+          "nodeLineageTag": "1fd3cae7-2023-4056-a7d5-261024bad912",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "AP",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
