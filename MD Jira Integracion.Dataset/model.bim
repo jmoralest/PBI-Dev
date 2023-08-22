@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"pbi request jira ltp\",\"pbi request jira ltp II\",\"dates\",\"pbi story points\",\"pbi dim epic\",\"pbi dim issues\",\"Equipo\",\"ZZembImagenes\",\"pq imgs\"]"
+        "value": "[\"pbi request jira ltp\",\"pbi request jira ltp II\",\"dates\",\"pbi story points\",\"pbi dim epic\",\"pbi dim issues\",\"Equipo\",\"ZZembImagenes\",\"pq imgs\",\"ZZ_jmg_jira\",\"BinaryToPbiImage\"]"
       },
       {
         "name": "__TEdtr",
@@ -9489,6 +9489,35 @@
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
     "discourageImplicitMeasures": true,
+    "expressions": [
+      {
+        "name": "BinaryToPbiImage",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function"
+          }
+        ],
+        "description": "Funcion para imagenes pequeñas que no requeiren reducción y que no estan afectadas por el limite de 32000",
+        "expression": [
+          "let",
+          "\tBinaryToPbiImage = (BinaryContent as binary) as text=>",
+          "let",
+          "\t\tBase64 = \"data:image/jpg;base64, \" & Binary.ToText(BinaryContent, BinaryEncoding.Base64)",
+          "in\t\tBase64",
+          "",
+          "in",
+          "\tBinaryToPbiImage"
+        ],
+        "kind": "m",
+        "lineageTag": "8d008fc1-108a-45f2-a76e-2390dd59259b",
+        "queryGroup": "imagenes intermedias"
+      }
+    ],
     "queryGroups": [
       {
         "annotations": [
@@ -9499,6 +9528,15 @@
         ],
         "description": "ETL desde nuble Jira Software",
         "folder": "Proyectos Jira (API)"
+      },
+      {
+        "annotations": [
+          {
+            "name": "PBI_QueryGroupOrder",
+            "value": "1"
+          }
+        ],
+        "folder": "imagenes intermedias"
       }
     ],
     "relationships": [
@@ -9809,6 +9847,151 @@
             "mode": "import",
             "source": {
               "type": "calculationGroup"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ZZ_jmg_jira",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "BinaryToPbiImage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "58a7f0c4-310d-4c40-bd3b-66dd19c97b58",
+            "sourceColumn": "BinaryToPbiImage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date accessed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "9334172e-6a20-47a8-bc96-1b3ac842c285",
+            "sourceColumn": "Date accessed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date created",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "316cb413-be99-4794-9653-0678123dd78e",
+            "sourceColumn": "Date created",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date modified",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "0431c56b-0e6b-4ace-bf2f-09c757bbb00c",
+            "sourceColumn": "Date modified",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Extension",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6ff6741f-32bd-47f1-97df-ce355c30b354",
+            "sourceColumn": "Extension",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Folder Path",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b5cce07-00ba-47ad-8258-c40c12914c98",
+            "sourceColumn": "Folder Path",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Longitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f908e77c-6091-4086-90dc-a694935a23a0",
+            "sourceColumn": "Longitud",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "310d014f-8933-4e2e-9b70-68cd44a1912f",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bcad3cb9-c2b5-45ff-b2e1-bea377f072d2",
+        "partitions": [
+          {
+            "name": "ZZ_jmg_jira",
+            "mode": "import",
+            "queryGroup": "imagenes intermedias",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Folder.Files(\"E:\\ZZ_jmg_jira\"),",
+                "    #\"Invoked Custom Function\" = Table.AddColumn(Source, \"BinaryToPbiImage\", each BinaryToPbiImage([Content])),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Invoked Custom Function\",{{\"BinaryToPbiImage\", type text}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Longitud\", each Text.Length([#\"BinaryToPbiImage\"])),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Longitud\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
             }
           }
         ]
@@ -11135,10 +11318,24 @@
                 "value": "{\"isGeneralNumber\":true}"
               }
             ],
-            "dataType": "double",
+            "dataType": "int64",
             "lineageTag": "beb454af-0147-4c2b-86a8-7dfac78601fb",
             "sourceColumn": "Index",
             "summarizeBy": "none"
+          },
+          {
+            "name": "Longitud",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a9eadc65-2e34-4be0-8994-a9480c9aa26b",
+            "sourceColumn": "Longitud",
+            "summarizeBy": "sum"
           },
           {
             "name": "Name",
@@ -11177,7 +11374,6 @@
             "name": "Display Image",
             "dataCategory": "ImageUrl",
             "expression": [
-              "",
               "IF(",
               "    HASONEVALUE('pq imgs'[Name]),",
               "    \"data:image/jpeg;base64, \" &",
@@ -11189,6 +11385,7 @@
               "        ASC)",
               "        )"
             ],
+            "formatString": "Text",
             "lineageTag": "8a81afec-7026-47de-a050-f89a384c6af4"
           }
         ],
@@ -11200,7 +11397,7 @@
               "expression": [
                 "let",
                 "    //Get list of files in folder",
-                "    Source = Folder.Files(\"E:\\ZZ_imagenes_pbi\"),",
+                "    Source = Folder.Files(\"E:\\ZZ_jmg_jira\"),",
                 "    //Remove unnecessary columns",
                 "    RemoveOtherColumns = Table.SelectColumns(Source,{\"Content\", \"Name\"}),",
                 "    //Creates Splitter function",
@@ -11225,9 +11422,12 @@
                 "    //Converts results to table",
                 "    ToTable = #table(type table[Name=text,Pic=text],CombineLists),",
                 "    //Adds index column to output table",
-                "    AddIndexColumn = Table.AddIndexColumn(ToTable, \"Index\", 0, 1)",
+                "    AddIndexColumn = Table.AddIndexColumn(ToTable, \"Index\", 0, 1),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(AddIndexColumn,{{\"Index\", Int64.Type}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Changed Type\", \"Longitud\", each Text.Length([#\"Pic\"])),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Added Custom\",{{\"Longitud\", Int64.Type}})",
                 "in",
-                "    AddIndexColumn"
+                "    #\"Changed Type1\""
               ],
               "type": "m"
             }
