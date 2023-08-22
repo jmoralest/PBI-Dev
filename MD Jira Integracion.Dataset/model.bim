@@ -9558,10 +9558,6 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
-          },
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
           }
         ],
         "columns": [
@@ -9643,6 +9639,19 @@
             "dataType": "string",
             "lineageTag": "355e286e-dc5f-4dad-a521-3b0e51ac9ef4",
             "sourceColumn": "LastName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Public URL",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b21fb18c-e36c-4a24-a401-9abc154a31ef",
+            "sourceColumn": "Public URL",
             "summarizeBy": "none"
           },
           {
@@ -9760,46 +9769,6 @@
                 "     ",
                 ")"
               ]
-            },
-            {
-              "name": "MTD LY",
-              "expression": [
-                "VAR __today = TODAY()",
-                "VAR __lastYear = EDATE ( __today, -12 )",
-                "RETURN",
-                "CALCULATE (",
-                "    [MTD],",
-                "    SAMEPERIODLASTYEAR ( 'Dates'[Date] ),",
-                "    'Dates'[Date] <= __lastYear",
-                ")"
-              ]
-            },
-            {
-              "name": "zVsMTD%",
-              "expression": " DIVIDE([MTD]-[MTD LY],[MTD LY])",
-              "formatStringDefinition": {
-                "expression": "\"0.00%\""
-              }
-            },
-            {
-              "name": "YTD LY",
-              "expression": [
-                "VAR __today = TODAY()",
-                "VAR __lastYear = EDATE ( __today, -12 )",
-                "RETURN",
-                "CALCULATE (",
-                "    [YTD],",
-                "    SAMEPERIODLASTYEAR ( 'Dates'[Date] ),",
-                "    'Dates'[Date] <= __lastYear",
-                ")"
-              ]
-            },
-            {
-              "name": "VsYTDLY%",
-              "expression": " DIVIDE([YTD]-[SPLY YTD],[SPLY YTD])",
-              "formatStringDefinition": {
-                "expression": "\"0.00%\""
-              }
             }
           ]
         },

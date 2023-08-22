@@ -1,0 +1,165 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.119.986.0 (23.07)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"pq imgs\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-CL",
+    "tables": [
+      {
+        "name": "pq imgs",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Index",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "815870ba-ee6b-4d20-bf46-09299fe6f5b9",
+            "sourceColumn": "Index",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "47bc8ce6-9540-45ae-b20b-94d37c0204db",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5637cdb0-789a-4ca0-a0f4-09f1961bbd63",
+            "sourceColumn": "Pic",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "949e4dbf-0ece-4f68-b7fa-311f731789dd",
+        "measures": [
+          {
+            "name": "Display Image",
+            "dataCategory": "ImageUrl",
+            "expression": [
+              "",
+              "IF(",
+              "    HASONEVALUE('pq imgs'[Name]),",
+              "    \"data:image/jpeg;base64, \" &",
+              "    CONCATENATEX(",
+              "        'pq imgs',",
+              "        'pq imgs'[Pic],",
+              "        ,",
+              "        'pq imgs'[Index],",
+              "        ASC)",
+              "        )"
+            ],
+            "lineageTag": "ce6b3f24-ae9c-4214-8418-c12d06c19b30"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "pq imgs",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    //Get list of files in folder",
+                "    Source = Folder.Files(\"E:\\ZZ_imagenes_pbi\"),",
+                "    //Remove unnecessary columns",
+                "    RemoveOtherColumns = Table.SelectColumns(Source,{\"Content\", \"Name\"}),",
+                "    //Creates Splitter function",
+                "    SplitTextFunction = Splitter.SplitTextByRepeatedLengths(30000),",
+                "    //Converts table of files to list",
+                "    ListInput = Table.ToRows(RemoveOtherColumns),",
+                "    //Function to convert binary of photo to multiple",
+                "    //text values",
+                "    ConvertOneFile = (InputRow as list) =>",
+                "        let",
+                "            BinaryIn = InputRow{0},",
+                "            FileName = InputRow{1},",
+                "            BinaryText = Binary.ToText(BinaryIn, BinaryEncoding.Base64),",
+                "            SplitUpText = SplitTextFunction(BinaryText),",
+                "            AddFileName = List.Transform(SplitUpText, each {FileName,_})",
+                "        in",
+                "            AddFileName,",
+                "    //Loops over all photos and calls the above function",
+                "    ConvertAllFiles = List.Transform(ListInput, each ConvertOneFile(_)),",
+                "    //Combines lists together",
+                "    CombineLists = List.Combine(ConvertAllFiles),",
+                "    //Converts results to table",
+                "    ToTable = #table(type table[Name=text,Pic=text],CombineLists),",
+                "    //Adds index column to output table",
+                "    AddIndexColumn = Table.AddIndexColumn(ToTable, \"Index\", 0, 1)",
+                "in",
+                "    AddIndexColumn"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
